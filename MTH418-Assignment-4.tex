@@ -1,0 +1,62 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{geometry}
+\usepackage{enumerate}
+
+
+\begin{document}
+\begin{center}
+    \textbf{MTH418} \\
+    \textbf{Assignment 4}
+\end{center}
+
+\begin{enumerate}
+    \item[1.] Let $X_1, \dots, X_n$ be a random sample from $N(\mu, \sigma^2)$, $\mu \in \mathbb{R}, \sigma > 0$.
+    \begin{enumerate}
+        \item[(i)] Show that $\sum_{i=1}^n (X_i - \mu)^2$ and $U = \frac{\overline{X} - \mu}{\sqrt{\sum_{i=1}^n (X_i - \mu)^2}}$ are independent. Are $\sum_{i=1}^n (X_i - \mu)^2$ and $V = \frac{\overline{X} - \mu}{\sqrt{\sum_{i=1}^n (X_i - \overline{X})^2}}$ also independent? Find the mean and variance of $U^2$.
+        \item[(ii)] Show that $\overline{X}$ and $\underline{T} = (X_1 - \overline{X}, \dots, X_n - \overline{X})$ are independent. In particular, show that $\overline{X}$ and $W = \sum_{i=1}^n (X_i - \overline{X})^2$ are independent.
+        \item[(iii)] Find the conditional distribution function, conditional density and conditional expectation of $X_1$, given $\overline{X} = t, t \in \mathbb{R}$.
+        \item[(iv)] Using the m.g.f. and findings in (ii), find the distribution of $W = \sum_{i=1}^n (X_i - \overline{X})^2$.
+    \end{enumerate}
+\end{enumerate}
+
+\vspace{1em}
+
+\begin{enumerate}
+    \item[2.] Let $X_1, \dots, X_n$ be a random sample from $Exp(\mu, \sigma)$, $\mu \in \mathbb{R}, \sigma > 0$.
+    \begin{itemize}
+        \item[(i)] Show that $\sum_{i=1}^n(X_i - \mu)$ and $U = \frac{X_{(1)}-\mu}{\sum_{i=1}^n(X_i-\mu)}$ are independent. Are $\sum_{i=1}^n(X_i - \mu)$ and $V = \frac{X_{(1)}-\mu}{\sum_{i=1}^n(X_i-X_{(1)})}$ also independent? Find the mean and variance of $U$.
+        \item[(ii)] Show that $X_{(1)}$ and $\underline{T} = (X_1 - X_{(1)}, \dots, X_n - X_{(n)})$ are independent. In particular, show that $X_{(1)}$ and $\sum_{i=1}^n(X_i - X_{(1)})$ are independent.
+        \item[(iii)] Find the conditional distribution function, conditional density and conditional expectation of $X_1$, given $X_{(1)} = t, t > \mu$.
+        \item[(iv)] Using the m.g.f. and findings in (ii), find the distribution of $W = \sum_{i=1}^n(X_i - X_{(1)})$.
+        \item[(v)] Let $Z_i = \frac{X_{(n)}-X_{(i)}}{X_{(n)}-X_{(n-1)}}, i = 1, \dots, n-2$. Show that $\underline{T} = (X_{(1)}, \sum_{i=1}^n(X_i - X_{(1)}))$ and $\underline{Z} = (Z_1, \dots, Z_{n-2})$ are independent.
+    \end{itemize}
+\end{enumerate}
+
+\vspace{1em}
+
+\begin{enumerate}
+    \item[3.] Let $X_1, \dots, X_n$ be a random sample from $U(\theta_1, \theta_2)$, $-\infty < \theta_1 < \theta_2 < \infty$. Let $Z_i = \frac{X_{(i)} - X_{(1)}}{X_{(n)} - X_{(1)}}, i = 2, \dots, n-1$. Show that $\underline{T} = (X_{(1)}, X_{(n)})$ and $\underline{Z} = (Z_2, \dots, Z_{n-1})$ are independent.
+\end{enumerate}
+
+\vspace{1em}
+
+\begin{enumerate}
+    \item[4.] Let $X_1, \dots, X_n$ be a random sample from $U(0, \theta)$, $\theta > 0$.
+    \begin{enumerate}
+        \item[(i)] Show that $X_{(n)}$ and $\underline{T} = (\frac{X_1}{X_{(n)}}, \dots, \frac{X_n}{X_{(n)}})$ are independent.
+        \item[(ii)] Find $E(\frac{X_1}{X_{(n)}})$. Also find the conditional distribution function, conditional density and conditional expectation of $X_1$, given $X_{(n)} = t, 0 < t < \theta$.
+        \item[(iii)] Find $E(\frac{X_{(r)}}{X_{(n)}}), r = 1, \dots, n-1$.
+    \end{enumerate}
+\end{enumerate}
+
+\vspace{1em}
+
+\begin{enumerate}
+    \item[5.] Let $X_1, \dots, X_n$ and $Y_1, \dots, Y_n$ be independent random samples from $N(\mu_1, \sigma_1^2)$ and $N(\mu_2, \sigma_2^2)$, respectively, $-\infty < \mu_i < \infty, \sigma_i > 0, i = 1, 2$. Show that $\underline{T} = (\overline{X}, \overline{Y}, \sum_{i=1}^n (X_i - \overline{X})^2, \sum_{i=1}^n (Y_i - \overline{Y})^2)$ and
+    $$V(\underline{X}) = \frac{\sum_{i=1}^n (X_i - \overline{X})(Y_i - \overline{Y})}{\sqrt{\sum_{i=1}^n (X_i - \overline{X})^2 \sum_{i=1}^n (Y_i - \overline{Y})^2}}$$
+    are statistically independent.
+\end{enumerate}
+
+\end{document}

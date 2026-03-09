@@ -1,0 +1,76 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{geometry}
+\usepackage{enumerate}
+
+
+\begin{document}
+
+\begin{center}
+    \textbf{MTH418} \\
+    \textbf{Assignment 2}
+\end{center}
+
+\begin{enumerate}
+    \item[1.] Let $X_1, \dots, X_n$ be a random sample from a population with p.d.f./p.m.f. $f_{\theta}(\cdot), \theta \in \Theta$. In each of the following cases, using the factorization theorem, show that $T(\underline{X})$ is a sufficient statistic:
+    \begin{enumerate}
+        \item[(a)] For known $\mu \in \mathbb{R}$, $X_1 \sim \text{N}(\mu, \theta^2), \Theta = (0, \infty), T(\underline{X}) = \sum_{i=1}^n (X_i - \mu)^2$;
+        \item[(b)] $X_1 \sim \text{Beta}(\theta_1, \theta_2), \theta = (\theta_1, \theta_2), \Theta = (0, \infty) \times (0, \infty), T(\underline{X}) = \left(\prod_{i=1}^n X_i, \prod_{i=1}^n (1 - X_i)\right)$;
+        \item[(c)] $X_1 \sim \text{N}(\theta, \theta), \Theta = (0, \infty), T(\underline{X}) = \sum_{i=1}^n X_i^2$;
+        \item[(d)] $X_1 \sim \text{N}(\theta, \theta^2), \Theta = (0, \infty), T(\underline{X}) = \left(\overline{X}, \sum_{i=1}^n (X_i - \overline{X})^2\right)$;
+        \item[(e)] $X_1 \sim \text{U}(\theta_1, \theta_2), \theta = (\theta_1, \theta_2), \Theta = \{(x_1, x_2) \in \mathbb{R}^2 : x_1 < x_2\}, T(\underline{X}) = (X_{(1)}, X_{(n)})$;
+        \item[(f)] $X_1 \sim \text{U}(\theta - \frac{1}{2}, \theta + \frac{1}{2}), \Theta = \mathbb{R}, T(\underline{X}) = (X_{(1)}, X_{(n)})$;
+        \item[(g)] $f_{\theta}(x) = \frac{2(\theta - x)}{\theta^2} I_{(0, \theta)}(x), \Theta = (0, \infty), T(\underline{X}) = (X_{(1)}, \dots, X_{(n)})$;
+        \item[(h)] $X_1 \sim \text{Cauchy}(\theta), \Theta = \mathbb{R}, T(\underline{X}) = (X_{(1)}, \dots, X_{(n)})$;
+        \item[(i)] $X_1 \sim \text{Poisson}(\theta), \Theta = (0, \infty), T(\underline{X}) = \overline{X}$;
+        \item[(j)] For known positive integer $m, X_1 \sim \text{Bin}(m, \theta), \Theta = (0, 1), T(\underline{X}) = \sum_{i=1}^n X_i$;
+        \item[(k)] For normalizing constant $c(\theta), f_{\theta}(x) = \frac{c(\theta)}{x^2}, x = \theta+1, \theta+2, \dots, \Theta = \{0, 1, 2, \dots\}, T(\underline{X}) = X_{(1)}$.
+    \end{enumerate}
+
+\end{enumerate}
+
+\vspace{1em}
+
+\begin{enumerate}
+    \item[2.] Each of the parts (a)-(k) below correspond to the corresponding part of Problem 1. For each of the parts (a)-(k), show that the statistic $U(\underline{X})$, as defined below, is sufficient for $\theta$:
+    \begin{itemize}
+        \item[(a)] $U(\underline{X}) = (\overline{X}, \sum_{i=1}^{n}(X_i - \overline{X})^2)$;
+        \item[(b)] $U(\underline{X}) = (X_{(1)}, \dots, X_{(n)})$;
+        \item[(c)] $U(\underline{X}) = 15T^2(\underline{X}) + 8T(\underline{X}) - 23$;
+        \item[(d)] $U(\underline{X}) = (\overline{X}, \sum_{i=1}^{n}(X_i - 1)^2)$;
+        \item[(e)] $U(\underline{X}) = (2X_{(n)} - X_{(1)}, X_{(n)} + 3X_{(1)})$;
+        \item[(f)] $U(\underline{X}) = (X_{(1)}, X_{(2)}, \dots, X_{(n)})$;
+        \item[(g)] $U(\underline{X}) = (\prod_{i=1}^{n} X_i, X_{(2)} + X_{(3)}, 2X_{(2)} + 3X_{(3)}, X_{(4)}, \dots, X_{(n)})$;
+        \item[(h)] $U(\underline{X}) = (X_{(1)}, X_{(2)} - X_{(1)}, X_{(3)} - X_{(2)}, \dots, X_{(n-1)} - X_{(n-2)}, X_{(n)} - X_{(n-1)})$;
+        \item[(i)] $U(\underline{X}) = 2\overline{X}^2 + 3\overline{X} - 100$;
+        \item[(j)] $U(\underline{X}) = \overline{X}^5$;
+        \item[(k)] $U(\underline{X}) = 9e^{2X_{(1)}} - 17e^{X_{(1)}} - 1083$.
+    \end{itemize}
+\end{enumerate}
+
+\vspace{1em}
+
+\begin{enumerate}
+    \item[3.] Let $X_1, \dots, X_n$ be a random sample from a population with p.d.f./p.m.f. $f_\theta(\cdot), \theta \in \Theta$. In each of the following cases, using the conditional distribution of the sample $X_1, \dots, X_n$ given the statistic $T(\underline{X})$, show that the statistic $T(\underline{X})$ is sufficient for $\theta$.
+    \begin{enumerate}
+        \item[(a)] $X_1 \sim \text{Poisson}(\theta), \Theta = (0, \infty), T(\underline{X}) = \sum_{i=1}^n X_i$;
+        \item[(b)] For known positive integer $m$, $X_1 \sim \text{Bin}(m, \theta), \Theta = (0, 1), T(\underline{X}) = \sum_{i=1}^n X_i$;
+        \item[(c)] $n = 2, X_1 \sim \text{U}(0, \theta), \Theta = (0, \infty), T(\underline{X}) = \max\{X_1, X_2\}$;
+        \item[(d)] $n = 2, X_1 \sim \text{N}(0, \theta), \Theta = (0, \infty), T(\underline{X}) = X_1^2 + X_2^2$.
+    \end{enumerate}
+\end{enumerate}
+
+\vspace{1em}
+
+\begin{enumerate}
+    \item[4.] Let $X_1, \dots, X_n$ be a random sample from a population having p.d.f. $f_\theta(x) = \theta x^{\theta-1}, 0 < x < 1, \theta \in \Theta = (0, \infty)$.
+    \begin{enumerate}
+        \item[(a)] Show that $T(\underline{X}) = -\sum_{i=1}^n \ln X_i$ is a sufficient statistic for $\theta$;
+        \item[(b)] Find the p.d.f. and $T(\underline{X})$;
+        \item[(c)] Are $T_1(\underline{X}) = (X_1, \dots, X_n)$, $T_2(\underline{X}) = (X_{(1)}, \dots, X_{(n)})$, $T_3(\underline{X}) = (X_1, X_1 + X_2, \prod_{i=3}^n X_i)$, $T_4(\underline{X}) = T^2(\underline{X}) + 3T(\underline{X}) + 2$, $T_5(\underline{X}) = e^{T(\underline{X})} - T(\underline{X}) + \frac{1}{2}$ sufficient statistics for $\theta$?
+    \end{enumerate}
+\end{enumerate}
+
+
+\end{document}

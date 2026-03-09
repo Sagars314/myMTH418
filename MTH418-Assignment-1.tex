@@ -1,0 +1,55 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{geometry}
+\usepackage{enumerate}
+
+
+\begin{document}
+
+\begin{center}
+    \textbf{MTH418} \\
+    \textbf{Assignment 1}
+\end{center}
+
+\begin{enumerate}
+    \item[1.] For a positive integer $\nu$, let $X \sim t_\nu$. We know that $X \stackrel{d}{=} \frac{Z}{\sqrt{\frac{Y}{\nu}}}$, where $Z \sim N(0, 1)$ and $Y \sim \chi^2_\nu$ are independently distributed. Using the aforementioned representation, find the mean and variance of $t_\nu$. Also show that $t^2_\nu \sim f_{1,\nu}$.
+\end{enumerate}
+
+\begin{enumerate}
+    \item[2.] Let $X_1, \dots, X_n$ be a random sample from $N(\mu, \sigma^2)$, where $\mu \in (-\infty, \infty)$ and $0 < \sigma < \infty$. Let $\overline{X}_n = \frac{1}{n} \sum_{i=1}^n X_i$. Find means and variances of r.v.s $S_n^2 = \frac{1}{n} \sum_{i=1}^n (X_i - \overline{X}_n)^2$ and $T = \frac{\overline{X}_n}{S_n}$.
+\end{enumerate}
+
+\begin{enumerate}
+    \item[3.] For positive integers $\nu_1$ and $\nu_2$, let $X \sim f_{\nu_1, \nu_2}$. We know that $X \stackrel{d}{=} \frac{Y_1 / \nu_1}{Y_2 / \nu_2}$, where $Y_1 \sim \chi_{\nu_1}^2$ and $Y_2 \sim \chi_{\nu_2}^2$ are independently distributed. Using this representation of $f_{\nu_1, \nu_2}$, find its mean and variance. Also show that $T = \frac{1}{f_{\nu_1, \nu_2}} \sim f_{\nu_2, \nu_1}$.
+\end{enumerate}
+
+\begin{enumerate}
+    \item[4.] Let $X_1, \dots, X_m$ and $Y_1, \dots, Y_n$ be independent random samples from $N(\mu_1, \sigma_1^2)$ and $N(\mu_2, \sigma_2^2)$, respectively, where $\mu_i \in (-\infty, \infty)$ and $0 < \sigma_i < \infty, i = 1, 2$. Let $\bar{X} = \frac{1}{m} \sum_{i=1}^m X_i$, $\bar{Y} = \frac{1}{n} \sum_{i=1}^n Y_i$, $S_X^2 = \frac{1}{m} \sum_{i=1}^m (X_i - \bar{X})^2$ and $S_Y^2 = \frac{1}{n} \sum_{i=1}^n (Y_i - \bar{Y})^2$. Find means and variances of following r.v.s:
+    \begin{enumerate}
+        \item[(a)] $T_1 = \frac{\bar{X} - \bar{Y}}{\sqrt{S_X^2 + S_Y^2}}$, when $m = n$ and $\sigma_1^2 = \sigma_2^2$;
+        \item[(b)] $T_2 = \frac{S_X}{S_Y}$.
+    \end{enumerate}
+    Also, for $m = n$, find $\displaystyle \lim_{n \to \infty} P(U_n \le 1)$, where $U_n = \frac{\sqrt{n}(\bar{X} - \bar{Y} - (\mu_1 - \mu_2))}{\sqrt{\sigma_1^2 + \sigma_2^2}}$.
+\end{enumerate}
+
+\begin{enumerate}
+    \item[5.] Let $Z_1, Z_2, \dots, Z_{12}$ be a random sample from $N(0,1)$. Find the p.d.f.s of the following random variables:
+    \begin{enumerate}
+        \item[(a)] $Y_1 = \frac{Z_1}{\sqrt{\sum_{i=2}^{11} Z_i^2}}$
+        \item[(b)] $Y_2 = \frac{Z_1 + Z_2}{\lvert Z_1 - Z_2 \rvert}$
+        \item[(c)] $Y_3 = \frac{Z_1 + Z_2}{Z_1 - Z_2}$
+        \item[(d)] $Y_4 = \frac{Z_1^2 + Z_2^2}{\sum_{i=3}^{11} Z_i^2}$
+        \item[(e)] $Y_5 = \frac{Z_1^2 + Z_2^2 + Z_3^2}{\sum_{i=1}^{11} Z_i^2}$
+        \item[(f)] $Y_6 = \sum_{i=1}^{11} (Z_i - \overline{Z}_9)^2 + Z_{10}^2$, 
+        where $\overline{Z}_9 = \frac{1}{9}\sum_{i=1}^{9} Z_i$
+        \item[(g)] $Y_7 = \frac{3(Z_{11} + Z_{12})}{\sqrt{Y_6}}$
+        \item[(h)] $Y_8 = \frac{Z_{11}^2 + Z_{12}^2}{2Y_6}$
+    \end{enumerate}
+\end{enumerate}
+
+\begin{enumerate}
+    \item[6.] Let $X_1, X_2, \dots$ be a sequence of r.v.s such that the r.v. $X_n$ follows the Poisson distribution with mean $n$. Find the values of $\lim_{n \to \infty} P(\frac{9n}{10} \le X_n \le \frac{11n}{10})$, $\lim_{n \to \infty} P(X_n \le n + 2\sqrt{n})$ and $\lim_{n \to \infty} e^{-n} \sum_{j=0}^{[n-\sqrt{n}]} \frac{n^j}{j!}$, where, for any real number $x$, $[x]$ denotes the largest integer not exceeding $x$.
+\end{enumerate}
+
+\end{document}

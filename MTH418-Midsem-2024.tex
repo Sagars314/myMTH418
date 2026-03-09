@@ -1,0 +1,71 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+
+\geometry{a4paper, margin=1in}
+
+\begin{document}
+
+\begin{center}
+    \textbf{MTH-418a: Inference-I} \\
+    \textbf{2023-2024: II Semester} \\
+    \textbf{Mid Semester Examination}
+\end{center}
+
+\noindent \textbf{Time Allowed:} 120 Minutes \hfill \textbf{Maximum Marks:} 50 \\
+\rule{\textwidth}{0.4pt}
+
+\noindent \textbf{NOTE:} 
+\begin{itemize}
+    \item[(i)] Start answer of every question on a new page. Moreover, attempt all the parts of a question at one place.
+    \item[(ii)] Answer each question legibly, clearly and concisely. Illegible answers will not be graded.
+    \item[(iii)] For each question, provide details of all the steps involved in arriving at the final answer(s)/conclusion(s) and box your final answer(s)/conclusion(s).
+\end{itemize}
+\rule{\textwidth}{0.4pt}
+
+\begin{enumerate}
+    \item Identify \textbf{TRUE} and \textbf{FALSE} statements from the following ten statements. In support of your answers, provide appropriate arguments. \hfill [1.5 $\times$ 10 = 15 Marks]
+    
+    \begin{enumerate}
+        \item[(i)] If $|T|$ is a sufficient statistic for $\theta \in \Theta$, then $T$ is also a sufficient statistic for $\theta \in \Theta$.
+        \item[(ii)] If $T$ is a complete statistic, then $e^{T}-T-1$ is also a complete statistic.
+        \item[(iii)] If $T$ is a complete statistic and $T^{2}$ is a sufficient statistic, then $T$ is a minimal sufficient statistic.
+        \item[(iv)] If $T$ is a minimal sufficient statistic, then $T^{3}-2T^{2}+2T+1$ is also a minimal sufficient statistic.
+        \item[(v)] Let $x_{1}=1.1$, $x_{2}=1.5$ and $x_{3}=0.4$ be the observed values of a random sample of size 3 from the pdf
+        \[ f_{\theta}(x)=\frac{1}{\theta}e^{-\frac{x}{\theta}}, \quad x>0, \]
+        where $\theta \in (0, \infty) = \Theta$. Then, the maximum likelihood estimate of $\theta$ is 0.5.
+        \item[(vi)] Let $x_{1}=-1.5$, $x_{2}=-0.2$ and $x_{3}=0.2$ be the observed values of a random sample of size 3 from the pdf
+        \[ f_{\theta}(x)=\frac{e^{-|x-\theta|}}{2}; \quad -\infty < x < \infty \]
+        where $\theta \in \mathbb{R} = \Theta$. Then, the method of moment estimate of $\theta$ is 0.2.
+        \item[(vii)] If $\delta_{1}$ is the UMVUE of $\psi(\theta), \theta \in \Theta$, and $\delta_{2}$ is an unbiased estimator of $\psi(\theta)$, then $Var_{\theta}(\delta_{1})=2Cov_{\theta}(\delta_{1},\delta_{2})$, $\forall \theta \in \Theta$.
+        \item[(viii)] Let $X_1, X_{2}$ be a random sample from $U(0,\theta)$, where $\theta \in (0,\infty) = \Theta$. Let $X_{(1)} \le X_{(2)}$ be the corresponding order statistics. Using Basu's theorem and the distribution of order statistics, $E_{\theta}\left(\frac{X_{(1)}}{X_{(2)}}\right)=0.5, \forall \theta > 0$.
+        \item[(ix)] A minimal sufficient statistic is always complete.
+        \item[(x)] If $\delta_{1}$ and $\delta_{2}$ are two UMVUEs of $\psi(\theta)$, then $Var_{\theta}(\delta_{1}-\delta_{2})=0, \forall \theta \in \Theta$, and $P_{\theta}(\delta_{1} = \delta_{2}) = 1, \forall \theta \in \Theta$.
+    \end{enumerate}
+
+    \item Let $X_{1}, X_{2}$ be a random sample from a population having the pdf
+    \[ f_{\theta}(x)=\frac{1}{\pi} \cdot \frac{1}{1+(x-\theta)^{2}}, \quad x \in \mathbb{R} \]
+    where $\theta \in \mathbb{R} = \Theta$. Show that $\underline{T}=(X_{(1)},X_{(2)})$ is a minimal sufficient statistic. Is $T$ a boundedly complete statistic? \hfill [6 + 5 = 11 Marks]
+
+    \item Let $X_{1}, X_{2}, X_{3}$ be a random sample of size 3 from the pdf
+    \[ f_{\theta}(x)=\frac{2x}{\theta^{2}}, \quad 0 < x < \theta, \]
+    where $\theta \in (0, \infty) = \Theta$.
+    \begin{enumerate}
+        \item[(i)] Find the MLE of $\theta$.
+        \item[(ii)] Find the MME of $\theta$.
+        \item[(iii)] Using the Rao-Blackwell Theorem, find an estimator based on the complete sufficient statistic $X_{(3)}=\max\{X_{1},X_{2},X_{3}\}$ that is better than the MME under the absolute error loss function $L(\theta,a)=|a-\theta|, a \in \mathbb{R} = A, \theta \in \Theta$. \hfill [4 + 4 + 4 = 12 Marks]
+    \end{enumerate}
+
+    \item Let $X$ be a random variable having the pmf
+    \[ f_{\theta}(x) = 
+    \begin{cases} 
+    \theta, & \text{if } x = -1 \\
+    (1-\theta)^{2}\theta^{x}, & \text{if } x = 0, 1, 2, \dots \\
+    0, & \text{otherwise}
+    \end{cases} \]
+    where $\theta \in (0,1) = \Theta$. Show that the UMVUE of $\psi(\theta)=\theta(1-\theta)^{2}$ does not exist. \hfill [12 Marks]
+
+\end{enumerate}
+
+\end{document}

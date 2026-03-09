@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{enumerate}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\large MTH 418a: Inference-I} \\
+    \textbf{Assignment No. 6: Unbiased Estimation, UMVUE, Lehmann-Scheffé Theorem}
+\end{center}
+
+\begin{enumerate}
+    \item Let $X_{1}, \dots, X_{n}$ be a random sample from p.m.f./p.d.f. $f_{\theta}$. In each of the following cases, find the UMVUE of $\psi(\theta)$ if it exists.
+    \begin{enumerate}[(i)]
+        \item $X_{1} \sim N(\theta, \sigma_{0}^{2})$, $\Theta = \mathbb{R}$, $\psi(\theta) = \theta^{r}$, $r = 1, 2, 3, 4$, $\sigma_{0}$ is a known positive constant;
+        \item $X_{1} \sim N(\mu_{0}, \theta^{2})$, $\Theta = (0, \infty)$, $\psi(\theta) = \theta^{r}$, $r > -n$, $\mu_{0}$ is a known real constant;
+        \item $X_{1} \sim \text{Exp}(\mu_{0}, \theta)$, $\Theta = (0, \infty)$, $\psi(\theta) = \theta^{r}$, $r > -n$, $\mu_{0}$ is a known real constant;
+        \item $X_{1} \sim \text{Exp}(\mu_{0}, \theta)$, $\Theta = (0, \infty)$, $\psi(\theta) = P_{\theta}(X_{1} \le t_{0})$ where $\mu_{0}$ and $t_{0}$ are fixed real constants;
+        \item $X_{1} \sim \text{Exp}(\theta, \sigma_{0})$, $\Theta = \mathbb{R}$, $\psi_{r}(\theta) = \theta^{r}$, $r = 1, 2, 3, 4$, where $\sigma_{0}$ is a fixed positive constant;
+        \item $X_{1} \sim U(\mu_{0} - \theta, \mu_{0} + \theta)$, $\Theta = (0, \infty)$, $\psi(\theta) = \theta^{r}$, $r > -n$, $\mu_{0}$ is a known real constant;
+        \item $f_{\theta}(x) = \alpha_{0} \frac{x^{\alpha_{0}-1}}{\theta^{\alpha_{0}}} I(0 < x < \theta)$, $\Theta = (0, \infty)$, $\psi(\theta) = \theta^{r}$, $r > -n\alpha_{0}$, $\alpha_{0}$ is a known positive constant;
+        \item $f_{\theta}(x) = \alpha_{0} \frac{\theta^{\alpha_{0}}}{x^{\alpha_{0}+1}} I(x > \theta)$, $\Theta = (0, \infty)$, $\psi(\theta) = \theta^{r}$, $r < n\alpha_{0}$, $\alpha_{0}$ is a known positive constant;
+        \item $X_{1} \sim \text{Bin}(m_{0}, \theta)$, $\Theta = (0, 1)$, $\psi(\theta) = \theta^{r}$, $r$ is a non-zero integer, $m_{0}$ is a known positive integer;
+        \item $X_{1} \sim \text{Poisson}(\theta)$, $\Theta = (0, \infty)$, $\psi(\theta) = (P_{\theta}(X_{1}=2))^{2}$. Also find the UMVUE of $\psi(\theta) = \cos(\theta)$;
+        \item $X_{1} \sim \text{Gamma}(\theta, \alpha_{0})$, $\Theta = (0, \infty)$, $\psi(\theta) = \theta^{r}$, $r > -n\alpha_{0}$, $\alpha_{0}$ is a known positive constant;
+        \item $X_{1} \sim \text{Gamma}(\sigma_{0}, \theta)$, $\Theta = (0, \infty)$, $\psi(\theta) = \theta^{r}$, $\sigma_{0}$ is a known positive constant;
+        \item $f_{\theta}(x) = a(x) \theta^{x} c(\theta)$, $x = 0, 1, 2, \dots$, $a(x) \ge 0$, $\Theta = (0, \infty)$, $\psi(\theta) = \theta^{r}$, $r$ is a positive integer, $c(\theta)$ is a normalizing factor for the p.m.f.;
+        \item $X_{1}$ follows discrete uniform distribution on the set $\{1, 2, \dots, \theta\}$, $\Theta = \{1, 2, \dots\}$, $\psi(\theta)$ is an arbitrary real-valued function defined on $\Theta$;
+        \item $X_{1}$ follows discrete uniform distribution on the set $\{1, 2, \dots, \theta\}$, $\Theta = \{1, 2, \dots\} \setminus \{\theta_{0}\}$, $\theta_{0}$ is a fixed positive integer and $\psi(\theta)$ is an arbitrary real-valued function defined on $\Theta$.
+    \end{enumerate}
+
+    \item Let $X_{1}, \dots, X_{n}$ be a random sample from a population with mean $\theta \in \mathbb{R}$ and finite variance. Let $\delta_{U}$ be the UMVUE of $\psi(\theta)$ and let $\delta_{0}$ be any other unbiased estimator of $\psi(\theta)$. Show that $\text{Cov}_{\theta}(\delta_{U}, \delta_{0}) = \text{Var}_{\theta}(\delta_{U})$.
+
+    \item 
+    \begin{enumerate}[(i)]
+        \item In an estimation problem, suppose that UMVUE of an estimand exists. Show that the UMVUE must be unique;
+        \item Let $\delta_{i}$ be the UMVUE of $\psi_{i}(\theta)$, $i = 1, \dots, k$, $\theta \in \Theta$. Show that $\delta_{P} = \sum_{i=1}^{k} \delta_{i}$ is the UMVUE of $\psi(\theta) = \sum_{i=1}^{k} \psi_{i}(\theta)$.
+    \end{enumerate}
+
+    \item Let $X_{1}, \dots, X_{n}$ be a random sample from p.d.f.
+    \[ f_{\theta}(x) = \begin{cases} \frac{\alpha x^{\alpha-1}}{\theta^{\alpha}}, & \text{if } 0 < x < \theta \\ 0, & \text{otherwise} \end{cases} \]
+    $\theta \in \Theta = (0, \infty)$, where $\alpha$ is a known positive constant. Let $\psi: (0, \infty) \to \mathbb{R}$ be a given function.
+    \begin{enumerate}[(i)]
+        \item Suppose that $\lim_{\theta \to 0} (\theta^{n\alpha} \psi(\theta)) = c$, for some non-zero constant $c$. Show that the UMVUE of $\psi(\theta)$ does not exist;
+        \item Suppose that $\psi(\theta)$ is an $u$-estimable differentiable function. Find the UMVUE of $\psi(\theta)$. In particular, find the UMVUEs of $\psi_{1}(\theta) = e^{-\theta}$ and $\psi_{2}(\theta) = \theta \ln \theta$.
+    \end{enumerate}
+
+    \item Let $X_{1}, \dots, X_{n}$ ($n \ge 3$) be a random sample from $N(\mu, \sigma^{2})$ where $\underline{\theta} = (\mu, \sigma) \in \mathbb{R} \times (0, \infty) = \Theta$, say.
+    \begin{enumerate}[(i)]
+        \item Find the UMVUE of $\psi_{r}(\underline{\theta}) = \mu^{r}$, $r = 1, 2, 3, 4$;
+        \item For estimating $\sigma^{r}$ ($r < n+1$) under the squared error loss function, find the minimum mean squared error (risk function under the SEL function) estimator of the form $\delta_{\alpha}(\underline{X}) = \alpha (\sum_{i=1}^{n}(X_{i} - \overline{X})^{2})^{\frac{r}{2}}$, $\alpha > 0$. Find the risk functions of the minimum mean squared estimator and the UMVUE.
+        \item Find the UMVUEs of $\psi_{5}(\underline{\theta}) = \frac{\mu}{\sigma}$;
+        \item Find the UMVUE of $\xi_{p}(\underline{\theta})$, the $p$-th quantile of $X_{1}$;
+        \item Find the UMVUE of $\psi_{6}(\underline{\theta}) = \Phi(\frac{t_{0}-\mu}{\sigma})$, where $t_{0}$ is a fixed real constant;
+        \item Find the UMVUE of $\psi_{7}(\underline{\theta}) = \frac{1}{\sigma} \phi(\frac{t_{0}-\mu}{\sigma})$, where $t_{0}$ is a fixed real constant.
+    \end{enumerate}
+
+    \item Let $X_{1}, \dots, X_{n}$ ($n \ge 4$) be a random sample from $\text{Exp}(\mu, \sigma)$, where $\underline{\theta} = (\mu, \sigma) \in \mathbb{R} \times (0, \infty) = \Theta$, say.
+    \begin{enumerate}[(i)]
+        \item Find the UMVUE of $\psi_{r}(\theta) = \mu^{r}$, $r = 1, 2$;
+        \item For estimating $\sigma^{r}$ ($r < n+1$) under the squared error loss function, find the minimum mean squared error (risk function under the SEL function) estimator of the form $\delta_{\alpha}(\underline{X}) = \alpha (\sum_{i=1}^{n}(X_{i} - X_{(1)}))^{r}$, $\alpha > 0$. Find the risk functions of the minimum mean squared estimator and the UMVUE.
+        \item Find the UMVUE of $\xi_{p}(\underline{\theta})$, the $p$-th quantile of $X_{1}$;
+        \item Find the UMVUE of $\psi_{6}(\underline{\theta}) = P_{\underline{\theta}}(X_{1} \le t_{0})$, where $t_{0}$ is a fixed real constant;
+    \end{enumerate}
+
+    \item Let $X_{1}, \dots, X_{m}$ and $Y_{1}, \dots, Y_{n}$ be independent random samples from $N(\mu_{1}, \sigma_{1}^{2})$ and $N(\mu_{2}, \sigma_{2}^{2})$, respectively, where $\underline{\theta} = (\mu_{1}, \mu_{2}, \sigma_{1}, \sigma_{2}) \in \mathbb{R}^{2} \times (0, \infty)^{2} = \Theta$, say.
+    \begin{enumerate}[(i)]
+        \item Find the UMVUE of $\psi_{r}(\underline{\theta}) = (\mu_{1} - \mu_{2})^{r}$, $r = 1, 2, 3$;
+        \item Find the UMVUE of $\psi_{4,r}(\underline{\theta}) = \frac{\sigma_{1}^{r}}{\sigma_{2}^{s}}$, $(r > -n+1 \text{ and } s < n-1)$;
+        \item Suppose that it is known a priori that $\sigma_{1}^{2} = k\sigma_{2}^{2}$, where $k$ is a known positive constant. Find the UMVUEs of $\psi_{5}(\underline{\theta}) = (\mu_{1} - \mu_{2})^{3}$ and $\psi_{6}(\underline{\theta}) = \sigma_{1}^{3}$.
+    \end{enumerate}
+
+    \item Let $X_{1}, \dots, X_{m}$ and $Y_{1}, \dots, Y_{n}$ be independent random samples from $\text{Exp}(\mu_{1}, \sigma_{1})$ and $\text{Exp}(\mu_{2}, \sigma_{2})$, respectively, where $\underline{\theta} = (\mu_{1}, \mu_{2}, \sigma_{1}, \sigma_{2}) \in \mathbb{R}^{2} \times (0, \infty)^{2} = \Theta$, say.
+    \begin{enumerate}[(i)]
+        \item Find the UMVUE of $\psi_{r}(\underline{\theta}) = (\mu_{1} - \mu_{2})^{r}$, $r = 1, 2$;
+        \item Find the UMVUE of $\psi_{3,r}(\underline{\theta}) = \frac{\sigma_{1}^{r}}{\sigma_{2}^{s}}$, $(r > -m+1 \text{ and } s < n-1)$;
+        \item Suppose that it is known a priori that $\sigma_{1} = k\sigma_{2}$, where $k$ is a known positive constant. Find the UMVUEs of $\psi_{4}(\underline{\theta}) = (\mu_{1} - \mu_{2})^{2}$ and $\psi_{5}(\underline{\theta}) = \sigma^{2}$.
+    \end{enumerate}
+
+    \item Let $X_{1}, \dots, X_{m}$ and $Y_{1}, \dots, Y_{n}$ be independent random samples from $\text{Poisson}(\theta_{1})$ and $\text{Poisson}(\theta_{2})$, respectively, where $\underline{\theta} = (\theta_{1}, \theta_{2}) \in (0, \infty)^{2}$.
+    \begin{enumerate}[(i)]
+        \item Using alone the sample $X_{1}, \dots, X_{m}$ find the UMVUE of $\psi_{1}(\theta_{1}) = P_{\theta_{1}}(X_{1} \in O)$ where $O$ is the set of all odd integers;
+        \item Find the UMVUE of $\psi_{2}(\theta) = (\theta_{1} - \theta_{2})^{2}$.
+    \end{enumerate}
+
+    \item Let $\mathcal{P}$ be the collection of all Lebesgue p.d.f.s (p.d.f.s of all continuous distributions). Let $X_{1}, \dots, X_{n}$ be a random sample from an unknown distribution in $\mathcal{P}$.
+    \begin{enumerate}[(i)]
+        \item Show that $\underline{T} = (X_{(1)}, \dots, X_{(n)})$ is a complete-sufficient statistic;
+        \item Find the UMVUEs of $\theta = E_{f}(X_{1})$, $\sigma^{2} = \text{Var}(X_{1})$, $\tau_{1} = \theta^{2}$ and $\tau_{2} = P_{f}(X_{1} \le t_{0})$, where $t_{0}$ is a fixed real constant.
+    \end{enumerate}
+
+    \item Let $\mathcal{P}$ be the collection of all symmetric Lebesgue p.d.f.s having finite mean. Let $X_{1}, \dots, X_{n}$ be a random sample from an unknown distribution in $\mathcal{P}$.
+    \begin{enumerate}[(i)]
+        \item Is $\underline{T} = (X_{(1)}, \dots, X_{(n)})$ a complete statistic?
+        \item Show that, for $n \ge 2$, no UMVUE of $\theta = E_{f}(X_{1})$ exists;
+        \item Show that, for $n = 1$, $X_{1}$ is complete for $\mathcal{P}$. In this case, show that $\delta_{0}(X_{1}) = X_{1}$ is the UMVUE of $\tau = E_{f}(X_{1})$.
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}

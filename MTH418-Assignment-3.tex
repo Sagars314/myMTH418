@@ -1,0 +1,84 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{geometry}
+\usepackage{enumerate}
+
+
+\begin{document}
+
+\begin{center}
+    \textbf{MTH418} \\
+    \textbf{Assignment 3}
+\end{center}
+
+\begin{enumerate}
+    \item [1.] Show that every function of a complete statistic is complete.
+\end{enumerate}
+
+\begin{enumerate}
+    \item [2.] Let $X_1, \ldots, X_n$ be a random sample from a population with p.d.f./p.m.f. $f_\theta(\cdot), \theta \in \Theta$. In each of the following cases, show that $T(\underline{X})$ is a minimal sufficient statistic. Also verify if it is complete.
+
+    \begin{enumerate}
+        \item[(a)] For known $\mu_0 \in \mathbb{R}, X_1 \sim \mathrm{N}(\mu_0, \theta^2), \Theta = (0, \infty), T(\underline{X}) = \sum_{i=1}^n (X_i - \mu_0)^2$. Is $\underline{U}(\underline{X}) = \left(\bar{X}, \sum_{i=1}^n (X_i - \bar{X})^2\right)$ sufficient and complete?;
+        \item[(b)] For known $\sigma_0 > 0, X_1 \sim \mathrm{N}(\theta, \sigma_0^2), \Theta = \mathbb{R}, T(\underline{X}) = \sum_{i=1}^n X_i$;
+        \item[(c)] $X_1 \sim \mathrm{N}(\mu, \sigma^2), \underline{\theta} = (\mu, \sigma) \in \mathbb{R} \times (0, \infty), \underline{T}(\underline{X}) = \left(\bar{X}, \sum_{i=1}^n (X_i - \bar{X})^2\right)$. Is $U(\underline{X}) = \bar{X} + S^2$ sufficient and complete?;
+        \item[(d)] For known $\mu_0 \in \mathbb{R}, X_1 \sim \mathrm{Exp}(\mu_0, \theta), \Theta = (0, \infty), T(\underline{X}) = \sum_{i=1}^n (X_i - \mu_0)$. Is $U(\underline{X}) = \bar{X}$ complete and sufficient?;
+        \item[(e)] For known $\sigma_0 > 0, X_1 \sim \mathrm{Exp}(\theta, \sigma_0), \Theta = \mathbb{R}, T(\underline{X}) = X_{(1)}$. Is $\underline{U}(\underline{X}) = \left(X_{(1)}, \sum_{i=1}^n (X_i - X_{(1)})\right)$ sufficient and complete?;
+        \item[(f)] $X_1 \sim \mathrm{Exp}(\mu, \sigma), \underline{\theta} = (\mu, \sigma) \in \mathbb{R} \times (0, \infty), \underline{T}(\underline{X}) = \left(X_{(1)}, \sum_{i=1}^n (X_i - X_{(1)})\right)$;
+        \item[(g)] For known $\alpha_0 > 0, X_1 \sim \mathrm{Gamma}(\alpha_0, \theta), \Theta = (0, \infty), T(\underline{X}) = \sum_{i=1}^n X_i$.
+    \end{enumerate}
+
+\end{enumerate}
+
+\begin{enumerate}
+    \item[3.] Let $X_1, \dots, X_n$ be a random sample from a population with p.d.f./p.m.f. $f_\theta(\cdot), \theta \in \Theta$. In each of the following cases, show that $T(\underline{X})$ is a minimal sufficient statistic. Also verify if it is complete.
+    \begin{enumerate}
+        \item[(a)] For known $\mu_0 \in \mathbb{R}$, $X_1 \sim \text{N}(\mu_0, \theta^2)$, $\Theta = (0, \infty)$, $T(\underline{X}) = \sum_{i=1}^n (X_i - \mu_0)^2$;
+        \item[(b)] $X_1 \sim \text{Beta}(\theta_1, \theta_2)$, $\underline{\theta} = (\theta_1, \theta_2)$, $\Theta = (0, \infty) \times (0, \infty)$, $T(\underline{X}) = \left( \prod_{i=1}^n X_i, \prod_{i=1}^n (1 - X_i) \right)$;
+        \item[(c)] $X_1 \sim \text{N}(\theta, \theta)$, $\Theta = (0, \infty)$, $T(\underline{X}) = \sum_{i=1}^n X_i^2$;
+        \item[(d)] $X_1 \sim \text{N}(\theta, \theta^2)$, $\Theta = (0, \infty)$, $T(\underline{X}) = \left( \overline{X}, \sum_{i=1}^n (X_i - \overline{X})^2 \right)$;
+        \item[(e)] $X_1 \sim \text{U}(\theta_1, \theta_2)$, $\underline{\theta} = (\theta_1, \theta_2)$, $\Theta = \{(x_1, x_2) \in \mathbb{R}^2 : x_1 < x_2 \}$, $T(\underline{X}) = (X_{(1)}, X_{(n)})$;
+        \item[(f)] $X_1 \sim \text{U}(\theta - \frac{1}{2}, \theta + \frac{1}{2})$, $\Theta = \mathbb{R}$, $T(\underline{X}) = (X_{(1)}, X_{(n)})$;
+        \item[(g)] $f_\theta(x) = \frac{2(\theta - x)}{\theta^2} I_{(0, \theta)}(x)$, $\Theta = (0, \infty)$, $T(\underline{X}) = (X_{(1)}, \dots, X_{(n)})$;
+        \item[(h)] $X_1 \sim \text{Poisson}(\theta)$, $\Theta = (0, \infty)$, $T(\underline{X}) = \overline{X}$;
+        \item[(i)] For known positive integer $m$, $X_1 \sim \text{Bin}(m, \theta)$, $\Theta = (0, 1)$, $T(\underline{X}) = \sum_{i=1}^n X_i$;
+        \item[(j)] For normalizing constant $c(\theta)$, $f_\theta(x) = \frac{c(\theta)}{x^2}$, $x = \theta + 1, \theta + 2, \dots$, $\Theta = \{0, 1, 2, \dots\}$, $T(\underline{X}) = X_{(1)}$.
+    \end{enumerate}
+\end{enumerate}
+
+\begin{enumerate}
+    \item [4.] Each of the parts (a)-(j) below correspond to the corresponding parts of Problem 3. For each of the parts (a)-(j), determine whether the statistic $U(\underline{X})$, as defined below, is minimal sufficient for $\theta$. Also verify if it is complete.
+    \begin{enumerate}
+        \item[(a)] $U(\underline{X}) = \left(\overline{X}, \sum_{i=1}^{n}(X_i - \overline{X})^2\right)$;
+        \item[(b)] $U(\underline{X}) = (X_{(1)}, \dots, X_{(n)})$;
+        \item[(c)] $U(\underline{X}) = 15T^2(\underline{X}) + 8T(\underline{X}) - 23$;
+        \item[(d)] $U(\underline{X}) = \left(\overline{X}, \sum_{i=1}^{n}(X_i - 1)^2\right)$;
+        \item[(e)] $U(\underline{X}) = (2X_{(n)} - X_{(1)}, X_{(n)} + 3X_{(1)})$;
+        \item[(f)] $U(\underline{X}) = (X_{(1)}, X_{(2)}, \dots, X_{(n)})$;
+        \item[(g)] $U(\underline{X}) = \left(\prod_{i=1}^{n} X_i, X_{(2)} + X_{(3)}, 2X_{(2)} + 3X_{(3)}, X_{(4)}, \dots, X_{(n)}\right)$;
+        \item[(h)] $U(\underline{X}) = 2\overline{X}^2 + 3\overline{X} - 100$;
+        \item[(i)] $U(\underline{X}) = \overline{X}^5$;
+        \item[(j)] $U(\underline{X}) = 9e^{2X_{(1)}} - 17e^{X_{(1)}} - 1083$.
+    \end{enumerate}
+\end{enumerate}
+
+\begin{enumerate}
+    \item [5.] Let $X_1, X_2$ be a random sample from a discrete uniform distribution on the set $\{\theta, \theta+1, \theta+2\}$, where $\theta \in \Theta = \{0, 1, 2, \dots\}$. Show that $\underline{T} = \left( \frac{X_{(1)}+X_{(2)}}{2}, X_{(2)} - X_{(1)} \right)$ is a minimal sufficient statistic. Is it complete?
+\end{enumerate}
+
+\begin{enumerate}
+    \item [6.] Let $X$ be a r.v. with distributional support $\chi = \{-1, 0, 1, 2, \dots\}$ and p.m.f. $f_\theta, \theta \in (0, 1) = \Theta$, where $f_\theta(-1) = \theta$ and $f_\theta(x) = (1 - \theta)^2 \theta^x, x = 0, 1, 2, \dots$. Show that the family $\mathcal{P} = \{f_\theta : \theta \in \Theta\}$ is boundedly complete but not complete.
+\end{enumerate}
+
+\begin{enumerate}
+    \item [7.] Let $X_1, X_2, \dots, X_n$ be a random sample from a discrete uniform distribution on the set $\{1, 2, \dots, \theta\}$, where $\theta \in \{1, 2, \dots\} = \Theta$.
+    \begin{enumerate}
+        \item[(a] Show that that the family $\mathcal{P} = \{f_\theta : \theta \in \Theta\}$ is complete;
+        \item[(b)] Let $m_0 \in \Theta$. Show that the family $\mathcal{P}_1 = \{f_\theta : \theta \in \Theta - \{m_0\}\}$ is not complete;
+        \item[(c)] Show that $T(\underline{X}) = X_{(n)}$ is complete.
+    \end{enumerate}
+\end{enumerate}
+
+
+\end{document}

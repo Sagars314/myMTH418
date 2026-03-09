@@ -1,0 +1,98 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{geometry}
+
+\geometry{a4paper, margin=1in}
+
+\begin{document}
+
+\begin{center}
+    \textbf{MTH-418a: Inference-I} \\
+    \textbf{2022-2023: II Semester} \\
+    \textbf{Mid Semester Examination}
+\end{center}
+
+\noindent \textbf{Time Allowed: 120 Minutes} \hfill \textbf{Maximum Marks: 50}
+
+\vspace{1em}
+
+\noindent \textbf{NOTE:} 
+\begin{enumerate}
+    \item Start answer of every question on a new page. Moreover, attempt all the parts of a question at one place.
+    \item Answer each question legibly, clearly and concisely. Illegible answers will not be graded.
+    \item For each question, provide details of all the steps involved in arriving at the final answer(s)/conclusion(s) and box your final answer(s)/conclusion(s).
+\end{enumerate}
+
+\hr
+
+\begin{enumerate}
+    \item Let $X_{1}, X_{2}$ be a random sample from a population having the p.d.f.
+    \[
+    f_{\theta}(x) = 
+    \begin{cases} 
+    (x-\theta)e^{-(x-\theta)}, & \text{if } x \ge \theta \\
+    0, & \text{otherwise}
+    \end{cases}
+    \]
+    where $\theta \in \mathbb{R} = \Theta$, say, is an unknown parameter. \hfill (3+2+2+2+2+3=14 Marks)
+    
+    \begin{enumerate}
+        \item Find a minimal sufficient statistic for $\theta$.
+        \item Is $\underline{T} = (X_{1}+X_{2}, |X_{1}-X_{2}|)$ a minimal sufficient statistic for $\theta$?
+        \item Is $\underline{U} = (X_{1}+X_{2}, X_{1}-X_{2})$ a sufficient statistic for $\theta$?
+        \item Is $\underline{T} = (X_{1}+X_{2}, |X_{1}-X_{2}|)$ a complete statistic?
+        \item Find the MME of $\theta$.
+        \item Find the MLE of $\theta$.
+    \end{enumerate}
+
+    \item Let $X_{1}, \dots, X_{n}$ be a random sample from $U(0, \theta)$, where $\theta \in (0, \infty) = \Theta$, say, is an unknown parameter. For a fixed $t \in (0, \theta)$, using the Basu Theorem, find the conditional p.d.f. of $X_{1}$, given $X_{(n)} = t$. Hence, find the conditional expectation $E(X_{1}|X_{(n)})$. \hfill (6+2=8 Marks)
+
+    \item 
+    \begin{enumerate}
+        \item Let $X_{1}, \dots, X_{n}$ be a random sample from $N(\mu, \sigma^{2})$, where $\underline{\theta} = (\mu, \sigma) \in \mathbb{R} \times (0, \infty) = \Theta$, say. Assuming that both $\mu$ and $\sigma$ are unknown, find the UMVUE of $\psi(\underline{\theta}) = \mu^{3}$. \hfill (4 Marks)
+        \item Let $X_{1}, \dots, X_{n}$ be a random sample from Poisson($\theta$), where $\theta \in (0, \infty) = \Theta$, say, is an unknown parameter. Find the UMVUE of $\psi(\theta) = \theta e^{\theta}$. \hfill (4 Marks)
+    \end{enumerate}
+
+    \item Let $X_{1}, X_{2}$ be a random sample from a population having the p.d.f.
+    \[
+    f_{\theta}(x) = 
+    \begin{cases} 
+    \frac{1}{\theta}e^{-\frac{x}{\theta}}, & \text{if } x > 0 \\
+    0, & \text{otherwise}
+    \end{cases}
+    \]
+    where $\theta \in (0, \infty) = \Theta$, say, is an unknown parameter. Consider estimation of $\theta$ under the loss function $L(\theta, d)$ that is convex in $d \in \mathbb{R}$, for every fixed $\theta \in \Theta$. Let $\delta$ be a randomized estimator for $\theta$, such that, for any fixed $\underline{x} = (x_{1}, x_{2}) \in (0, \infty)^{2}$, $\delta(x_{1}, x_{2}) \sim p_{\underline{x}}$ where
+    \[
+    p_{\underline{x}}(a) = 
+    \begin{cases} 
+    \frac{2}{x_{1}}e^{-\frac{2a}{x_{1}}}, & \text{if } a > 0 \\
+    0, & \text{otherwise}
+    \end{cases}
+    \]
+    Let $T = X_{1} + X_{2}$.
+    \begin{enumerate}
+        \item Find a randomized estimator $\delta_{1}(T)$, based on $T$, that has the same risk function as the randomized estimator $\delta$, defined above. \hfill (4 Marks)
+        \item Find a non-randomized estimator $\delta_{2}(X_{1})$ based on $X_{1}$ alone, that dominates the randomized estimator $\delta_{1}(T)$, derived in (a) above. \hfill (2 Marks)
+        \item Find a non-randomized estimator $\delta_{3}(\overline{X})$, based on $\overline{X} = \frac{X_{1}+X_{2}}{2}$, that dominates the randomized estimator $\delta(X_{1}, X_{2})$. \hfill (4 Marks)
+    \end{enumerate}
+
+    \item Let $X$ be a r.v. with the p.m.f.
+    \[
+    f_{\theta}(k) = 
+    \begin{cases} 
+    2\theta(1-\theta), & \text{if } k = -1 \\
+    \theta^{k}(1-\theta)^{3-k}, & \text{if } k \in \{0, 1, 2, 3\} \\
+    0, & \text{otherwise}
+    \end{cases}
+    \]
+    where $\theta \in (0, 1) = \Theta$ is unknown.
+    \begin{enumerate}
+        \item Find the class of all unbiased estimators of $\psi(\theta) = \theta$. \hfill (5 Marks)
+        \item Find the UMVUE of $\theta$ provided it exists. \hfill (5 Marks)
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}
