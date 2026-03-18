@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{enumerate}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\large MTH418 : Inference-I} \\
+    \textbf{Assignment No. 6a: Rao-Cramer Lower Bounds}
+\end{center}
+
+\begin{enumerate}
+    \item Let $X_{1}, \dots, X_{n}$ be a random sample from a p.d.f./p.m.f. $f_{\theta}$, where $\theta \in \Theta$ is an unknown parameter.
+    
+    In each of the following cases find the Rao-Cramer lower bound on unbiased estimators of $g(\theta)$ and compare it with the variance of the UMVUE of $g(\theta)$:
+    \begin{enumerate}
+        \item[(i)] $X_{1} \sim N(\mu, \theta^{2})$ where $\mu$ is known, $\Theta = (0, \infty)$, $g(\theta) = \theta^{2}$;
+        \item[(ii)] $X_{1} \sim N(\mu, \theta^{2})$, where $\mu$ is known, $\Theta = (0, \infty)$, $g(\theta) = \theta$;
+        \item[(iii)] $X_{1} \sim Bin(1, \theta)$, $\Theta = (0, 1)$, $g(\theta) = \theta$;
+        \item[(iv)] $X_{1} \sim Bin(1, \theta)$, $\Theta = (0, 1)$, $g(\theta) = \theta(1 - \theta)$;
+        \item[(v)] $X_{1} \sim \text{Poisson}(\theta)$, $\Theta = (0, \infty)$, $g(\theta) = \theta$;
+        \item[(vi)] $X_{1} \sim \text{Poisson}(\theta)$, $\Theta = (0, \infty)$, $g(\theta) = e^{-\theta}(1 + \theta)$;
+        \item[(vii)] $X_{1} \sim Gamma(\alpha, \theta)$ where $\alpha > 0$ is known, $\Theta = (0, \infty)$, $g(\theta) = \theta$;
+        \item[(viii)] $X_{1} \sim Gamma(\alpha, \theta)$, where $\alpha > 0$ is known, $\Theta = (0, \infty)$, $g(\theta) = \theta^{2}$
+    \end{enumerate}
+
+    \item Suppose that $\underline{X}$ has a p.m.f./p.d.f. $f_{\theta}$, where $\theta \in \Theta$ is an unknown real parameter. Let $g$ be a real-valued function defined on $\Theta$. For any $\theta \in \Theta$, define $A_{\theta} = \{x : f_{\theta}(x) > 0\}$ and $B_{\theta} = \{\Delta : \theta + \Delta \in \Theta, g(\theta) \neq g(\theta + \Delta), \text{ and } A_{\theta + \Delta} \subseteq A_{\theta}\}$, $\theta \in \Theta$. Let $\delta$ be an unbiased estimator of $g(\theta)$. Show that
+    \[
+    V_{\theta}(\delta) \ge \sup_{\Delta \in B_{\theta}} \left[ \frac{(g(\theta + \Delta) - g(\theta))^{2}}{E_{\theta} \left[ \left( \frac{f_{\theta + \Delta}(X)}{f_{\theta}(X)} - 1 \right)^{2} \right]} \right], \quad \theta \in \Theta
+    \]
+
+    \item Let $X_{1}, \dots, X_{n}$ be a random sample from $U(0, \theta)$, where $\theta \in (0, \infty) = \Theta$. Using Problem 2, find a lower bound on unbiased estimators of $\theta$. Is it attained by the UMVUE of $\theta$?
+
+    \item Let $X_{1}, \dots, X_{n}$ be a random sample from $N(\mu, \sigma^{2})$, where $\underline{\theta} = (\mu, \sigma) \in \mathbb{R} \times (0, \infty) = \Theta$. Find a lower bound on unbiased estimators of $\psi(\underline{\theta}) = \mu + \sigma$. Is this lower bound attained by the UMVUE of $\psi(\underline{\theta})$?
+
+    \item Let $X_{1}, \dots, X_{n}$ be a random sample from $Bin(1, \theta)$, where $\theta \in (0, 1) = \Theta$. Let $\underline{\delta} = (\delta_{1}, \delta_{2}, \delta_{3})$ be an unbiased estimator of $\underline{\psi}(\underline{\theta}) = (\theta, 1 - \theta, \theta(1 - \theta))$. Find a matrix $B$ such that $V_{\theta}(\delta) - B$ is non-negative definite. Hence find lower bounds on unbiased estimators of $\psi_{i}(\underline{\theta})$, $i = 1, 2, 3$. Compare these lower bounds with those obtained in Problem 1 (iii) \& (iv).
+
+    \item Let $X_{1}, \dots, X_{n}$ be a random sample from $Exp(\theta)$, where $E_{\theta}(X_{1}) = \theta \in (0, \infty) = \Theta$. Let $\underline{\delta} = (\delta_{1}, \delta_{2}, \delta_{3})$ be an unbiased estimator of $\underline{\psi}(\underline{\theta}) = (\theta, \theta^{2}, \theta^{3})$. Find a matrix $B$ such that $V_{\theta}(\delta) - B$ is non-negative definite. Hence find lower bounds on unbiased estimators of $\psi_{i}(\underline{\theta})$, $i = 1, 2, 3$. Compare these lower bounds with the variances of the respective UMVUEs.
+\end{enumerate}
+
+\end{document}
